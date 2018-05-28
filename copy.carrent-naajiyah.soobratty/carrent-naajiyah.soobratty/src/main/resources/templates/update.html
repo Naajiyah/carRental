@@ -1,0 +1,27 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<title>Car Page</title>
+</head>
+<body>
+<h1>UPDATE A CAR</h1>
+<div>
+	<form th:action="@{/updating}" method="post">
+	<table>
+	
+	<tr><td>Registration Number:</td>
+	<td><input type="text" name="registrationNumber"/></td></tr>
+	
+	<tr><td>Price Per Day:</td>
+	<td><input type="text" name="pricePerDay"/></td></tr>
+	
+	<tr>
+	<td><input type="submit"/></td></tr>
+
+</table>
+</form>
+</div>
+</body>
+</html>
+	
+	

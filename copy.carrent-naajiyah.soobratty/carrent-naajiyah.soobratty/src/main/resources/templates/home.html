@@ -1,0 +1,25 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<title>HOME PAGE</title>
+</head>
+<body>
+<table border="1" cellpadding="1" cellspacing="1">
+<tr> 
+	<th>Registration Number </th>
+	<th>Model</th>
+	<th>Year</th>
+	<th>Price Per Day</th>
+	<th>Availability</th>
+	
+	<tr th:each="car : ${cars}">
+			<td th:text="${car.registrationNumber}" />
+			<td th:text="${car.year}" />
+			<td th:text="${car.model}" />
+			<td th:text="${car.pricePerDay}" />
+			<td th:text="${car.availability}" />
+			<td><a th:href="'/delete/'+${car.registrationNumber}" class="btn btn-danger">Delete</a></td>
+			</tr>
+</table>
+</body>
+</html>
